@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react';
 import styled from 'styled-components'
 import history from '../History'
 import { scale } from '../transitions'
@@ -23,16 +23,22 @@ const BackBtn = styled.button`
     width: 150px;
 `
 
-const NotFound = () => {
-    return (
-        <NotFoundStyled>
-            <BackContainer>
-                <h1>Not Found</h1>
-                <h2>the page you are looking for doesn't exist</h2>
-                <BackBtn onClick={() => history.push({ pathname: '/beers', state: scale })}>back to safety</BackBtn>
-            </BackContainer>
-        </NotFoundStyled>
-    )
+class NotFound extends Component {
+    render() {
+        // const { toggle } = this.props
+        return (
+            <NotFoundStyled>
+                <BackContainer>
+                    <h1>Not Found</h1>
+                    <h2>the page you are looking for doesn't exist</h2>
+                    <BackBtn 
+                        onClick={() => {
+                            this.props.toggle(1)
+                            history.push({ pathname: '/beers', state: scale })}}>back to safety</BackBtn>
+                </BackContainer>
+            </NotFoundStyled>
+        )
+    }
 }
 
 export default NotFound

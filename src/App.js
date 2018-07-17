@@ -195,7 +195,7 @@ class App extends Component {
                 <Route exact path="/" render={props => <Cooler active={active} background={backgroundCooler} open={open} toggle={this.toggleActiveClass}/>}/>
                 <Route exact path="/beers" render={props => <AllBeers background={backgroundMain} beers={beers} deleteBeer={this.deleteBeer} like={like} pint={pint} plus={plus} toggle={this.toggleActiveClass} updateLikes={this.updateLikes}/>}/>
                 <Route path="/add" render={props => <AddBeers background={backgroundAdd} handleSubmit={this.handleSubmit} plus={plus} />}/>
-                <Route component={NotFound}/>
+                <Route render={props => <NotFound toggle={this.toggleActiveClass}/>}/>
               </Switch>
             </Transitions>
           )}/>
