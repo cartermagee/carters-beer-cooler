@@ -1,4 +1,4 @@
-# 🍻 [Carter's Beer Cooler](http://carters-beer-cooler.surge.sh/) 🍻
+# 🍻 __[Carter's Beer Cooler](http://carters-beer-cooler.surge.sh/)__ 🍻
 
 ### Assignment: build a Restful-React app that demonstrates client side CRUD behavior.
 
