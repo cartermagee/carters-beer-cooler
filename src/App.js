@@ -10,6 +10,7 @@ import Nav from './components/Nav'
 import AllBeers from './components/AllBeers'
 import AddBeers from './components/AddBeers'
 import Cooler from './components/Cooler'
+import { slide } from './transitions'
 
 import Cap from './images/bottle-cap.svg';
 import BackgroundAdd from './images/background-add.png'
@@ -116,6 +117,8 @@ class App extends Component {
       .then(res => {
         this.loadData()
         alert(`Thanks for adding a beer to the cooler! 😋`)
+        this.toggleActiveClass(1)
+        history.push({ pathname: '/beers', state: slide })
       }).catch((error) => {
         alert("UH OH! Looks like we're having issues with our server please try again later")
         console.log(error)

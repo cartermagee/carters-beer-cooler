@@ -88,7 +88,7 @@ class AllBeers extends Component {
         <AllBeersContainer background={background}>
           {Object.keys(beers).map((key) => <BeerItem deleteBeer={deleteBeer} details={beers[key]} handleChange={this.handleChange} index={key} key={key} like={like} pint={pint} plus={plus} toggleOpen={this.toggleOpen}/>)}
           <AddBeer onClick={()=> {
-                toggle(1)
+                toggle(2)
                 history.push({pathname: '/Add', state: slideUp})
               }} >
             <PlusIcon src={plus} alt="add beer icon"/>
